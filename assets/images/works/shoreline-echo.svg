@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract shoreline with layered blue and ochre brush fields">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fa9b8"/>
+      <stop offset="45%" stop-color="#d7bda0"/>
+      <stop offset="100%" stop-color="#aa7f5e"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c6b84"/>
+      <stop offset="100%" stop-color="#1e3f55"/>
+    </linearGradient>
+    <filter id="canvas" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.07"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="soften" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect width="1200" height="900" filter="url(#canvas)" opacity="0.9"/>
+
+  <path d="M0 500 C170 455 350 540 555 495 C790 440 970 540 1200 500 L1200 900 L0 900 Z" fill="url(#water)"/>
+  <path d="M0 560 C220 610 390 575 590 620 C780 665 1010 610 1200 650 L1200 900 L0 900 Z" fill="#17364b" opacity="0.65"/>
+  <path d="M0 395 C180 350 355 428 545 392 C760 350 930 440 1200 375 L1200 530 C980 560 805 510 600 535 C375 562 180 498 0 530 Z" fill="#cc8f66" opacity="0.4"/>
+
+  <g fill="none" stroke-linecap="round" filter="url(#soften)">
+    <path d="M70 200 C240 225 390 225 560 200 C720 175 870 180 1110 225" stroke="#f5d5a8" stroke-width="24" opacity="0.3"/>
+    <path d="M90 430 C270 400 425 460 620 430 C800 395 970 450 1130 420" stroke="#d69f79" stroke-width="30" opacity="0.45"/>
+    <path d="M55 625 C205 655 390 635 560 672 C785 722 955 675 1135 705" stroke="#5f7f92" stroke-width="28" opacity="0.42"/>
+    <path d="M80 745 C250 775 390 755 600 782 C810 808 970 785 1125 818" stroke="#355f79" stroke-width="26" opacity="0.55"/>
+  </g>
+
+  <g stroke-linecap="round" opacity="0.5">
+    <path d="M135 615 L290 586 L435 625" stroke="#ecdfcf" stroke-width="10"/>
+    <path d="M470 710 L640 680 L810 730" stroke="#d6dde2" stroke-width="11"/>
+    <path d="M760 640 L930 612 L1090 662" stroke="#f5e4ce" stroke-width="9"/>
+  </g>
+
+  <circle cx="965" cy="215" r="72" fill="#ffd69b" opacity="0.78"/>
+</svg>

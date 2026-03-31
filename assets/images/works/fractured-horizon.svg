@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract wave composition with foaming crest and deep indigo water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d5d6"/>
+      <stop offset="100%" stop-color="#efe1cb"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17324c"/>
+      <stop offset="100%" stop-color="#3d6a8a"/>
+    </linearGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="27"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.08"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect width="1200" height="900" filter="url(#grain)"/>
+
+  <path d="M0 540 C180 485 340 500 510 540 C675 580 840 570 1000 512 C1100 476 1158 478 1200 500 L1200 900 L0 900 Z" fill="#2e5778"/>
+  <path d="M30 540 C230 395 430 368 646 430 C850 490 1005 450 1180 340 C1098 558 956 632 742 642 C522 651 295 624 30 540 Z" fill="url(#sea)"/>
+  <path d="M155 476 C318 360 507 322 700 360 C838 390 988 373 1110 298 C1026 470 892 534 704 545 C497 554 320 532 155 476 Z" fill="#4e80a6" opacity="0.72"/>
+
+  <g fill="none" stroke-linecap="round" opacity="0.68">
+    <path d="M155 520 C304 470 472 472 635 517" stroke="#edf0ee" stroke-width="22"/>
+    <path d="M315 486 C482 444 635 451 790 483" stroke="#f6f5f1" stroke-width="18"/>
+    <path d="M528 472 C655 434 792 435 920 456" stroke="#f9f9f4" stroke-width="16"/>
+    <path d="M730 446 C825 414 932 407 1032 420" stroke="#f8f4ea" stroke-width="14"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" opacity="0.4">
+    <path d="M80 675 C265 700 414 722 610 704" stroke="#9ab0bf" stroke-width="20"/>
+    <path d="M378 745 C552 765 705 770 910 750" stroke="#c5b496" stroke-width="23"/>
+    <path d="M638 700 C794 712 950 724 1135 705" stroke="#7893a8" stroke-width="19"/>
+  </g>
+</svg>

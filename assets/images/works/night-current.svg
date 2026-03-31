@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Nocturne harbor study with moon glow and layered reflections">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a263d"/>
+      <stop offset="42%" stop-color="#10213a"/>
+      <stop offset="100%" stop-color="#0a1526"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.67" cy="0.23" r="0.34">
+      <stop offset="0%" stop-color="#ffe2ad" stop-opacity="0.95"/>
+      <stop offset="46%" stop-color="#ffbf72" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffbf72" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="2" seed="41"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.07"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#night)"/>
+  <rect width="1200" height="900" fill="url(#moonGlow)"/>
+  <rect width="1200" height="900" filter="url(#grain)"/>
+
+  <circle cx="798" cy="215" r="54" fill="#ffc578" opacity="0.94"/>
+  <circle cx="798" cy="215" r="76" fill="#ffcb8e" opacity="0.18" filter="url(#glow)"/>
+
+  <path d="M0 522 C185 500 344 553 520 527 C720 496 920 560 1200 532 L1200 900 L0 900 Z" fill="#142b45"/>
+  <path d="M0 612 C218 580 388 640 562 621 C768 596 980 670 1200 642 L1200 900 L0 900 Z" fill="#0e2239"/>
+
+  <g fill="none" stroke-linecap="round" opacity="0.55">
+    <path d="M115 485 C205 475 274 486 360 480" stroke="#99adc5" stroke-width="15"/>
+    <path d="M333 515 C425 505 510 523 608 514" stroke="#879cb8" stroke-width="17"/>
+    <path d="M620 478 C730 468 822 490 930 478" stroke="#a3b7cc" stroke-width="14"/>
+    <path d="M892 522 C980 515 1038 525 1115 518" stroke="#7f98b1" stroke-width="13"/>
+  </g>
+
+  <g stroke="#ffba70" stroke-width="8" stroke-linecap="round" opacity="0.62">
+    <path d="M756 298 L776 428"/>
+    <path d="M787 312 L812 472"/>
+    <path d="M821 328 L848 522"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" opacity="0.4">
+    <path d="M134 700 C284 724 426 722 600 705" stroke="#2b4760" stroke-width="18"/>
+    <path d="M406 754 C575 780 732 775 926 748" stroke="#354f67" stroke-width="20"/>
+    <path d="M706 708 C842 722 964 720 1122 700" stroke="#29445c" stroke-width="17"/>
+  </g>
+</svg>
